@@ -1,0 +1,27 @@
+# Build the main site's code in Labs mode from the Labs hub and deploy it to this repository's Pages (the main site's
+# deploy-run.yml). The data snapshots are this repository's data branch.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '27 4 * * *'
+  repository_dispatch:
+    types: [hub-updated]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    uses: linuxserver-playground/site/.github/workflows/deploy-run.yml@main
+    with:
+      mode: labs
