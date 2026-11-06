@@ -1,0 +1,35 @@
+{
+ "bases": [
+  {
+   "image": "ghcr.io/linuxserver-playground/baseimage-selkies:ubunturesolute",
+   "family": "selkies",
+   "images": [
+    "photocraft"
+   ],
+   "newest_digest": "sha256:a8e26da62ec31fd5f3b5b03f9ee53ccb1fcd939247714807414f9ade6ac82081",
+   "newest_seen": "2026-11-03T02:02:28Z",
+   "digests": [
+    {
+     "digest": "sha256:a8e26da62ec31fd5f3b5b03f9ee53ccb1fcd939247714807414f9ade6ac82081",
+     "first_seen": "2026-11-03T02:02:28Z",
+     "last_seen": "2026-11-05T02:01:38Z",
+     "images": [
+      "photocraft"
+     ]
+    },
+    {
+     "digest": "sha256:40830db5ae0f2c8f89f3779f7946fcfa07a190c5a97c4fac8dfbf05272072d41",
+     "first_seen": "2026-11-02T17:30:06Z",
+     "last_seen": "2026-11-02T18:10:57Z",
+     "images": [
+      "photocraft"
+     ]
+    }
+   ]
+  }
+ ],
+ "staleness": {
+  "stale": [],
+  "checked": 1
+ }
+}
