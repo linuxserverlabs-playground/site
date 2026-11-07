@@ -1,20 +1,19 @@
-# Build the main site's code in Labs mode from the Labs hub and deploy it to this repository's Pages (the main site's
-# deploy-run.yml). The data snapshots are this repository's data branch.
+# Build the main site's code in Labs mode from the Labs hub and publish it to this repository's Pages from the gh-pages
+# branch (the main site's deploy-run.yml). The data snapshots are this repository's data branch. Only the Labs control
+# plane starts it, on its slots (control's deploys.py), and once a day with `refresh_all`.
 name: Deploy
 
 on:
-  push:
-    branches: [main]
-  schedule:
-    - cron: '27 4 * * *'
-  repository_dispatch:
-    types: [hub-updated]
   workflow_dispatch:
+    inputs:
+      refresh_all:
+        description: Refetch every retained build from the hub
+        type: boolean
+        default: false
 
 permissions:
   contents: write
   pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -25,3 +24,4 @@ jobs:
     uses: linuxserver-playground/site/.github/workflows/deploy-run.yml@main
     with:
       mode: labs
+      refresh_all: ${{ inputs.refresh_all }}
