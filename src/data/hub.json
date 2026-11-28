@@ -1,0 +1,31 @@
+{
+ "url": "https://linuxserverlabs-playground.github.io/hub",
+ "source": "remote",
+ "fetched": "2026-11-28T00:37:44.762Z",
+ "last_updated": "2026-11-02 17:44:25+00:00",
+ "status": {
+  "health": "Failed",
+  "images": 1,
+  "deprecated": 0,
+  "sources": {
+   "manifests": {
+    "ok": false,
+    "checked_at": "2026-11-28T00:34:43.296Z",
+    "fetched_at": "2026-11-02T17:44:25.911Z",
+    "error": "docker-filmcraft: no image.yml on main"
+   },
+   "observed": {
+    "ok": true,
+    "checked_at": "2026-11-28T00:33:36.007Z",
+    "fetched_at": "2026-11-28T00:33:36.560Z"
+   },
+   "releases": {
+    "ok": false,
+    "checked_at": "2026-11-28T00:34:43.296Z",
+    "fetched_at": "2026-11-02T17:44:25.911Z",
+    "error": "docker-filmcraft: no image.yml on main"
+   }
+  },
+  "rejected": {}
+ }
+}
